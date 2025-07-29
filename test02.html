@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <p v-if="gender===1">性别：男</p>
+        <p v-else>性别：女</p>
+        <br>
+        <p v-if="score>=90">A：一台电脑</p>
+        <p v-else-if="score>=70">B：一台手机</p>
+        <p v-else-if="score>=60">C：一包零食</p>
+        <p v-else>D：一个惩罚</p>
+        
+        <button @click="count=count-1">-</button>
+        <span>{{count}}</span>
+        <button @click="count=count+1">+</button>
+
+        <br>
+        <button @click="fn1">可乐5元</button>
+        <button @click="fn2">咖啡10元</button>
+
+
+
+
+
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        var app = new Vue({
+            el:"#app",
+            data:{
+                gender:2,
+                score:80,
+                count:1,
+                money:100,
+            },
+            methods:{
+                fn1(){
+                    console.log("hello!");
+                    this.money=this.money-5;
+                    console.log("余额："+ this.money);
+
+                },
+                fn2(){
+                    console.log("hello!");
+                    this.money=this.money-10;
+                    console.log("余额："+ this.money);
+
+                },
+            }
+        })
+    </script>
+</body>
+</html>
