@@ -1,0 +1,31 @@
+<template>
+  <div class="app">
+    <h1>Welcome to My Vue App</h1>
+    
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'App',
+  data() {
+    return {
+      message: 'Hello, Vue!'
+    };
+  },
+  mounted() {
+    console.log(this.message);
+  }
+};
+</script>
+
+<style>
+.app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
+</style>
